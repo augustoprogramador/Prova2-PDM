@@ -50,22 +50,22 @@ public class HomeFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        bdUsuario = BDUsuario.getInstance(getContext());
-        bdProduto = BDProduto.getInstance(getContext());
-
-        idUsuario = ((Home)getActivity()).getUserId();
-
-        if(idUsuario != null && !idUsuario.equals(""))
-            usuario = bdUsuario.findByID(idUsuario);
-
-        ArrayList<String> produtosIDs = bdProduto.getIDs();
-
-        if(produtosIDs.size() > 0){
-            Random rand = new Random();
-            int n = rand.nextInt(produtosIDs.size());
-
-            produto = bdProduto.findByID(produtosIDs.get(n));
-        }
+//        bdUsuario = BDUsuario.getInstance(getContext());
+//        bdProduto = BDProduto.getInstance(getContext());
+//
+//        idUsuario = ((Home)getActivity()).getUserId();
+//
+//        if(idUsuario != null && !idUsuario.equals(""))
+//            usuario = bdUsuario.findByID(idUsuario);
+//
+//        ArrayList<String> produtosIDs = bdProduto.getIDs();
+//
+//        if(produtosIDs.size() > 0){
+//            Random rand = new Random();
+//            int n = rand.nextInt(produtosIDs.size());
+//
+//            produto = bdProduto.findByID(produtosIDs.get(n));
+//        }
     }
 
     @Override

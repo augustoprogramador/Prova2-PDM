@@ -25,4 +25,9 @@
         android:name="com.example.prova2.fragment.NovoPedidoFragment"
         android:label="fragment_novo_pedido"
         tools:layout="@layout/fragment_novo_pedido" />
+    <fragment
+        android:id="@+id/edicaoUsuario"
+        android:name="com.example.prova2.fragment.EdicaoFragment"
+        android:label="fragment_edicao_usuario"
+        tools:layout="@layout/fragment_edicao_usuario" />
 </navigation>
