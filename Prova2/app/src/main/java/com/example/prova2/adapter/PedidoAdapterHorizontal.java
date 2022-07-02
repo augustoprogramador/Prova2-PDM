@@ -17,6 +17,7 @@ import com.example.prova2.bd.BDCarrinho;
 import com.example.prova2.model.Carrinho;
 import com.example.prova2.model.Produto;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class PedidoAdapterHorizontal extends RecyclerView.Adapter<PedidoAdapterHorizontal.ViewHolder>{
@@ -49,10 +50,20 @@ public class PedidoAdapterHorizontal extends RecyclerView.Adapter<PedidoAdapterH
     @Override
     public void onBindViewHolder(@NonNull PedidoAdapterHorizontal.ViewHolder holder, int position) {
         Carrinho carrinho = bdCarrinho.findByProductID(lista.get(position).getId(), idUsuario);
+        double desconto = lista.get(position).getDesconto();
+        double  precoAtt = lista.get(position).getPreco();
+
+        if (desconto != 0){
+            precoAtt = lista.get(position).getPreco();
+            precoAtt = precoAtt - (precoAtt * (desconto/100));
+        }
+
+        DecimalFormat frmt = new DecimalFormat();
+        frmt.setMaximumFractionDigits(2);
 
         holder.getImg().setImageBitmap(lista.get(position).getImg());
         holder.getNome().setText(lista.get(position).getNome());
-        holder.getPreco().setText("R$ "+ lista.get(position).getPreco().toString());
+        holder.getPreco().setText("R$ "+ String.valueOf(frmt.format(precoAtt)));
 
         holder.itemView.setOnClickListener(view -> mItemListener.onItemClick(lista.get(position)));
 
