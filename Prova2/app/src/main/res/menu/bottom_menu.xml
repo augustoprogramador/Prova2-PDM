@@ -20,4 +20,10 @@
         android:icon="@drawable/ic_baseline_list_alt_24"
         android:id="@+id/cardapioFragment"
         />
+
+    <item
+        android:title="Conta"
+        android:icon="@drawable/ic_person_24"
+        android:id="@+id/edicaoUsuario"
+        />
 </menu>
