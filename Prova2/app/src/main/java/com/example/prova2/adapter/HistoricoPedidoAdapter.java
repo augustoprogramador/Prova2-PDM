@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.prova2.R;
 import com.example.prova2.model.Pedido;
+import com.example.prova2.model.Produto;
 
 import java.util.ArrayList;
 
@@ -28,6 +29,10 @@ public class HistoricoPedidoAdapter extends RecyclerView.Adapter<HistoricoPedido
     public HistoricoPedidoAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.historico_pedido_vertical, parent, false);
         return new HistoricoPedidoAdapter.ViewHolder(v);
+    }
+
+    public interface ItemClickListener{
+        void onItemClick(Pedido pedido);
     }
 
     @Override

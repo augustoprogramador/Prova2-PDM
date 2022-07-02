@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".adapter.DetalhesProduto">
+
+    <TextView
+        android:id="@+id/txt_detalhes_pedido_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Pedido"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_detalhes_pedido_itens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/txt_detalhes_pedido_id"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detalhes_pedido_id" />
+
+    <TextView
+        android:id="@+id/txt_detalhes_pedido_pagamento_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Pagamento"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txt_detalhes_pedido_itens"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detalhes_pedido_itens" />
+
+    <TextView
+        android:id="@+id/txt_detalhes_pedido_pagamento_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Endereço"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txt_detalhes_pedido_pagamento"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detalhes_pedido_pagamento" />
+
+    <TextView
+        android:id="@+id/txt_detalhes_pedido_pagamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/txt_detalhes_pedido_pagamento_tv"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detalhes_pedido_pagamento_tv" />
+
+    <TextView
+        android:id="@+id/txt_detalhes_pedido_endereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/txt_detalhes_pedido_pagamento_tv2"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detalhes_pedido_pagamento_tv2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
